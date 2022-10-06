@@ -154,6 +154,11 @@
 .checkbox-text {
     color: var(--second-text-color);
     line-height: calc(24 / 14);
+    font-size: 12px;
+        @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: calc(24 / 14);
+        }
 }
 
 

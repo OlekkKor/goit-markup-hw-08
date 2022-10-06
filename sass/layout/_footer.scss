@@ -7,13 +7,15 @@
 .footer-flex {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap:60px;
     height: auto;
     
     
+    
     @media screen and (min-width: 768px) {
-        padding-left: 76px;
-        padding-right: 89px;
+        justify-content: center;
+        align-items: baseline;
         flex-direction: row;
         flex-wrap: wrap;
         gap:0px;
@@ -192,8 +194,13 @@
 .footer-send-label {
     width: 100%;
 
-    @media screen and (min-width: 1200px) {
-            margin-right: 12px;
+    @media screen and (min-width: 480px) {
+        width: 450px;
+        }
+
+    @media screen and (min-width: 1199px) {
+        width:358px;    
+        margin-right: 12px;
         }
 }
 
