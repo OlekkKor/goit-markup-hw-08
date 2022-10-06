@@ -1,0 +1,65 @@
+/* Постоятнные клиенты */
+
+.partners {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+        
+        @media screen and (min-width: 1200px) {
+            padding-top: 94px;
+            padding-bottom: 94px;
+        }
+    }
+
+
+.partners-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0px;
+    margin: 0px;
+}
+    
+.partners-image {
+    display: flex;
+    align-items: center;
+}
+
+.partners-link {
+    display: flex;
+    width: 210px;
+    height: 92px;
+    border: 1px solid var(--social-link);
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    transition: border 250ms var(--timing-function);
+
+    &:hover,
+    &:focus {
+    border: 1px solid var(--blue-color);
+    }
+
+        @media screen and (min-width: 768px) {
+            width: 226px;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            width: 170px;
+        }
+}
+
+.partners-logo {
+    display: block;
+    fill: var(--social-link);
+    transition: fill 250ms var(--timing-function);
+
+
+    .partners-link:hover>&,
+    .partners-link:focus>& {
+     fill: var(--blue-color);
+     }
+}
+
+

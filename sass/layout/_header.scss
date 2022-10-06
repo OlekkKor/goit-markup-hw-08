@@ -1,0 +1,171 @@
+/* header */
+
+.header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-flex {
+    display: flex;
+    height: 60px;
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
+        height: 80px;
+    }
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+
+    color: var(--black-pure-color);
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+}
+
+.logo-span {
+    color: var(--blue-color);
+}
+
+.nav {
+    display: none;
+
+        @media screen and (min-width: 768px) {
+        display: flex;
+        margin-left: 97px;
+        }
+}
+
+.item-nav {
+    display: flex;
+    padding-left: 0px;
+}
+
+.item-nav li {
+    margin-right: 52px;
+}
+
+.item-nav .link {
+    color: var(--primary-text-color);
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    transition: color 250ms var(--timing-function);
+}
+
+.item-nav li:last-child {
+    margin-right: 0px;
+}
+
+.item-nav .link:hover,
+.item-nav .link:focus {
+    color: var(--blue-color);
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.item-nav .link.current {
+    color: var(--blue-color);
+    position: relative;
+
+    &::after{
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+        
+    margin-bottom: -1px;
+    /* Костиль */
+    width: 100%;
+    height: 4px;
+    background: var(--blue-color);
+    border-radius: 2px;
+    }
+}
+
+/* header - Посилання */
+
+.site-contacts {
+    display: none;
+    margin-left: auto;
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            margin-left: auto;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            flex-direction: row;
+            
+        }
+
+}
+
+
+.site-contacts .link {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: var(--second-text-color);
+    fill: var(--second-text-color);
+
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    margin-right: 50px;
+
+    transition: color 250ms var(--timing-function);
+
+
+        @media (min-width: 768px) and (max-width: 1200px) {
+            display: flex;
+            margin-left: auto;
+            margin-right: 0px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            font-size: 12px;
+        }
+
+}
+
+.email-icon {
+    fill: currentColor;
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    transition: fill 250ms var(--timing-function);
+
+    @media (min-width: 768px) and (max-width: 1200px) {
+        width: 14px;
+        height: 10px;
+        margin-right: 8px;
+        }
+
+}
+
+.phone-icon {
+    fill: currentColor;
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    transition: fill 250ms var(--timing-function);
+}
+
+.site-contacts .link:hover,
+.site-contacts .link:focus,
+.site-contacts .email-icon:hover,
+.site-contacts .email-icon:focus,
+.site-contacts .phone-icon:hover,
+.site-contacts .phone-icon:focus {
+    fill: var(--blue-color);
+    color: var(--blue-color);
+}
